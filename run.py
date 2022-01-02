@@ -21,7 +21,7 @@ def make_prediction(input_parameters):
 
 if __name__ == "__main__":
     train_model()
-    pred = make_prediction([[6, 148, 72, 125, 40, 0.627, 50]])
-    print("The test prediction is {}".format(pred))
+    #pred = make_prediction([[6, 148, 72, 125, 40, 0.627, 50]])
+    #print("The test prediction is {}".format(pred))
 
 #print(model.predict_proba(transformed_example))

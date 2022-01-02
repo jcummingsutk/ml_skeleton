@@ -17,21 +17,7 @@ def summary_of_model(clf, X_train, X_test, y_train, y_test, threshold):
     pred_proba_train = clf.predict_proba(X_train)
     pred_train = (pred_proba_train[:, 1] >= threshold).astype("int")
     print(classification_report(y_test, pred_test))
-    print(
-        "Recall of diabetes on the training set: {:.2f}".format(
-            recall_score(y_train, pred_train)
-        )
-    )
-    print(
-        "Accuracy on the training set: {:.2f}".format(
-            accuracy_score(y_train, pred_train)
-        )
-    )
-    print(
-        "Recall of diabetes class on the test set: {:.2f}".format(
-            recall_score(y_test, pred_test)
-        )
-    )
+    
     print("Accuracy on the test set: {:.2f}".format(accuracy_score(y_test, pred_test)))
     print(confusion_matrix(y_test, pred_test))
     _, ax = plt.subplots(figsize=(9, 9))
